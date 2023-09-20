@@ -1,0 +1,44 @@
+yarn = npm
+yarn = npx
+
+TO ADD PRETTIER IN CONTRACT
+->yarn add --dev prettier prettier-plugin-solidity
+
+TO LOCATE CONFIG FILES:
+-> yarn hardhat --verbose
+
+
+IMPORTANT
+ if you already type -> yarn hardhat on the terminal,
+
+ the terminal will display a global option. 
+
+ So you might wondering how you gonna create a new project
+
+ It is because you probably have a config file somewhere that it shouldn't be 
+ and deleting it will get rid of this problem
+
+ So first you have to locate that config file by type -> yarn hardhat --verbose
+
+ This command will display a location of the file and you can delete it right away
+
+
+BLOCKCHAIN INTERACTION WITHOUT DEPLOY.JS:
+ - So you can deploy contract without calling - yarn hardhat run scripts/deploy.js --network sepolia/hardhat 
+
+ HOW?
+ - Open the hardhat console - yarn hardhat console 
+
+ - Then you can deploy the contract by typing   DEPLOY   - const SimpleStorageFactory = await ethers.getContractFactory("SimpleStorage")
+ - Then you can make a transaction (store)      STORE    - await simpleStorage.store(value)
+ - And you can retrieve the value by typing     RETRIEVE - await simpleStorage.retrieve()
+
+
+ TEST (Security):
+  running test is absolutely critical for our smart contract development journey.
+  and we're going to spend a lot of time writing a really good tests in the future
+
+  Why?
+  It is because we want to make sure our code does exactly what we want it to do
+  Especially in defy and decentralized smart contract world, all of our code will be an open source for anybody to interact with and potentially exploit
+
