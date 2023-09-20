@@ -6,6 +6,7 @@ Try running some of the following tasks:
 
 ```shell
       DESCRIPTION                                      COMMANDS
+
 To deploy your smart contract               - yarn hardhat run scripts/deploy.js 
 Compile you solidity file                   - yarn hardhat compile               
 Delete you cache and artifacts              - yarn hardhat clean                  
