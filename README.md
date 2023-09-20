@@ -44,7 +44,7 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
     - [Important localhost note](#important-localhost-note)
   - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
     - [Verify on etherscan](#verify-on-etherscan)
-- [In it's current state, if you have your api key set, it will auto verify rinkeby contracts!](#in-its-current-state-if-you-have-your-api-key-set-it-will-auto-verify-rinkeby-contracts)
+- [Blockchain Interaction without deploy.js](#blockchain-interaction-without-deploy.js)
 - [Linting](#linting)
 - [Thank you!](#thank-you)
    
@@ -78,19 +78,21 @@ yarn hardhat
 Deploy:
 
 ```
-npx hardhat run scripts/deploy.js
+yarn hardhat run scripts/deploy.js
 ```
 
 ## Testing
+Running test is absolutely critical for our smart contract development journey.
+Thus, we're going to spend a lot of time writing a really good tests in the future
 
 ```
-npx hardhat test
+yarn hardhat test
 ```
 
 ### Test Coverage
 
 ```
-npx hardhat coverage
+yarn hardhat coverage
 ```
 
 ## Estimate gas
@@ -98,7 +100,7 @@ npx hardhat coverage
 You can estimate how much gas things cost by running:
 
 ```
-npx hardhat test
+yarn hardhat test
 ```
 
 And you'll see and output file called `gas-report.txt`
@@ -108,13 +110,13 @@ And you'll see and output file called `gas-report.txt`
 If you'd like to run your own local hardhat network, you can run:
 
 ```
-npx hardhat node
+yarn hardhat node
 ```
 
 And then **in a different terminal**
 
 ```
-npx hardhat run scripts/deploy.js --network localhost
+yarn hardhat run scripts/deploy.js --network localhost
 ```
 
 And you should see transactions happen in your terminal that is running `npx hardhat node`
@@ -140,7 +142,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-npx hardhat run scripts/deploy.js --network sepolia
+yarn hardhat run scripts/deploy.js --network sepolia
 ```
 
 ### Verify on etherscan
@@ -152,7 +154,29 @@ In it's current state, if you have your api key set, it will auto verify sepolia
 However, you can manual verify with:
 
 ```
-npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
+yarn hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
+```
+
+### Blockchain Interaction without deploy.js:
+So you can deploy contract without calling - ```yarn hardhat run scripts/deploy.js --network sepolia/hardhat ```
+## How? 
+Open the hardhat console:
+
+```
+yarn hardhat console 
+```
+Deploy the contract:
+```
+const SimpleStorageFactory = await ethers.getContractFactory("SimpleStorage") 
+```
+
+Make a transaction (store):
+```
+await simpleStorage.store(value)
+```
+Retrieve the value:
+```
+await simpleStorage.retrieve()
 ```
 
 # Linting
