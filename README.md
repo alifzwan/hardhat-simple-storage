@@ -43,18 +43,7 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 - [In it's current state, if you have your api key set, it will auto verify rinkeby contracts!](#in-its-current-state-if-you-have-your-api-key-set-it-will-auto-verify-rinkeby-contracts)
 - [Linting](#linting)
 - [Thank you!](#thank-you)
-    - [Optional Gitpod](#optional-gitpod)
-- [Useage](#useage)
-  - [Testing](#testing)
-    - [Test Coverage](#test-coverage)
-  - [Estimate gas](#estimate-gas)
-  - [Local Deployment](#local-deployment)
-    - [Important localhost note](#important-localhost-note)
-  - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
-    - [Verify on etherscan](#verify-on-etherscan)
-- [Linting](#linting)
-- [Thank you!](#thank-you)
-
+   
 This project is apart of the Hardhat FreeCodeCamp video.
 
 # Getting Started
