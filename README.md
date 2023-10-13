@@ -22,15 +22,6 @@ Write a gas report                          - REPORT_GAS=true yarn hardhat test
 Additional help                             - yarn hardhat help
 ```
 # Hardhat Simple Storage
-
-This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
-
-*[⌨️ (08:20:17) Lesson 6: Hardhat Simple Storage](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=30017s)*
-
-*This repo has been updated for Sepolia over Goerli.*
-
-[Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
-
 - [Hardhat Simple Storage](#hardhat-simple-storage)
 - [Usage](#usage)
 - [Getting Started](#getting-started)
@@ -44,7 +35,7 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
     - [Important localhost note](#important-localhost-note)
   - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
     - [Verify on etherscan](#verify-on-etherscan)
-- [Blockchain Interaction without deploy.js](#blockchain-interaction-without-deploy.js)
+- [Blockchain Interaction without deploy.js](#blockchain-interaction-without-deployjs)
 - [Linting](#linting)
 - [Thank you!](#thank-you)
    
